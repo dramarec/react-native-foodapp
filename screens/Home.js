@@ -1,11 +1,27 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {
+    SafeAreaView,
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity,
+    Image,
+    FlatList,
+} from 'react-native';
 
-const Home = () => {
+import {icons, images, SIZES, COLORS, FONTS} from '../constants';
+
+const Home = ({navigation}) => {
     return (
         <View>
             <Text> Home</Text>
         </View>
     );
 };
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: COLORS.lightGray4,
+    },
+});
 export default Home;
