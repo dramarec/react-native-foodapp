@@ -6,17 +6,7 @@ import MapViewDirections from 'react-native-maps-directions';
 import {COLORS, FONTS, icons, SIZES, GOOGLE_API_KEY} from '../constants';
 
 const OrderDelivery = ({route, navigation}) => {
-    // console.log('OrderDelivery ===> navigation', navigation);
     const mapView = React.useRef();
-    console.log('OrderDelivery ===> mapView', mapView);
-    console.log(
-        'OrderDelivery ===> mapView.current.animateToRegion',
-        mapView.current.animateToRegion,
-    );
-    console.log(
-        ' ===> mapView.current.fitToCoordinates',
-        mapView.current.fitToCoordinates,
-    );
 
     const [restaurant, setRestaurant] = React.useState(null);
     const [streetName, setStreetName] = React.useState('');
@@ -32,11 +22,8 @@ const OrderDelivery = ({route, navigation}) => {
         let {restaurant, currentLocation} = route.params;
 
         let street = currentLocation.streetName;
-        // console.log('React.useEffect ===> street', street);
         let fromLoc = currentLocation.gps;
-        // console.log('React.useEffect ===> fromLoc', fromLoc);
         let toLoc = restaurant.location;
-        // console.log('React.useEffect ===> toLoc', toLoc);
 
         let mapRegion = {
             latitude: (fromLoc.latitude + toLoc.latitude) / 2,

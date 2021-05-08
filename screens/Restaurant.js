@@ -13,6 +13,8 @@ import {isIphoneX} from 'react-native-iphone-x-helper';
 import {icons, COLORS, SIZES, FONTS} from '../constants';
 
 const Restaurant = ({route, navigation}) => {
+
+
     const scrollX = new Animated.Value(0);
     const [restaurant, setRestaurant] = React.useState(null);
     const [currentLocation, setCurrentLocation] = React.useState(null);
