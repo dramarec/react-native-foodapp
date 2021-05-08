@@ -412,6 +412,7 @@ const Restaurant = ({route, navigation}) => {
                                 alignItems: 'center',
                                 borderRadius: SIZES.radius,
                             }}
+                            //get location route.params
                             onPress={() =>
                                 navigation.navigate('OrderDelivery', {
                                     restaurant: restaurant,
